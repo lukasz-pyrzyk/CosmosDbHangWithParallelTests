@@ -7,7 +7,6 @@
 - - "CosmosdbHang-endpoint"
 - - "CosmosdbHang-key"
 - - "CosmosdbHang-databaseId"
-- - "CosmosdbHang-containerId"
 
 ## 2. Repro
 
@@ -20,4 +19,5 @@
 7. Stop the tests execution, by force if needed
 8. Disable parallel execution by opening `xunit.runner.json` and changing `parallelizeTestCollections` to `false`
 9. Run all tests again. They should all be successful. 
-
+10. Checkout branch which has the same code logic, but SDK V2. It's called `sdkV2`.
+11. Run all tests in parallel for SDK V2. They should all be successful.
