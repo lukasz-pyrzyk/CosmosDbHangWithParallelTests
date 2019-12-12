@@ -1,1 +1,1 @@
-docker run --env-file=.env --cpu=1 cosmosdbhangrepro 
+docker run --env-file=.env --cpus=1 hang

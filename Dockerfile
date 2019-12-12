@@ -4,4 +4,6 @@ WORKDIR /app
 COPY Tests ./Tests
 COPY *.sln ./
 
+RUN dotnet build
+
 ENTRYPOINT ["dotnet", "test"]

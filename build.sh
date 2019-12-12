@@ -1,1 +1,1 @@
-docker build --no-cache -t cosmosdbhangrepro .
+docker build --no-cache -t hang .
