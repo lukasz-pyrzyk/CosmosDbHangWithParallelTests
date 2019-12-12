@@ -1,0 +1,1 @@
+docker run --env-file=.env --cpu=1 cosmosdbhangrepro 
