@@ -31,7 +31,7 @@ namespace Tests.Cosmos
         private async Task<Database> CheckIfDatabaseExists(Settings settings)
         {
             var database = _cosmosClient.GetDatabase(settings.DatabaseId);
-            var read = await database.ReadStreamAsync();
+            var read = await database.ReadStreamAsync().ConfigureAwait(false);
             if (read.StatusCode == HttpStatusCode.NotFound)
             {
                 throw new Exception($"CosmosDB database {settings.DatabaseId} does not exist!");
