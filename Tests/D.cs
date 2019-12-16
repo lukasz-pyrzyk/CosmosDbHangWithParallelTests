@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Tests
 {
-    public class C : BaseIntegrationTests
+    public class D : BaseIntegrationTests
     {
         [Fact]
         public async Task _1()
