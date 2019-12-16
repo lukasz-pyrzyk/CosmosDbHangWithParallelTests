@@ -1,4 +1,4 @@
-# Reproducing a thread hang when CosmosDB is used by several tests in parallel
+# A repro for issue https://github.com/Azure/azure-cosmos-dotnet-v3/issues/1067 . It was based on the CosmosDB SDK v3 3.4.1
 
 ## Setup
 
