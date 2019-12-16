@@ -15,7 +15,11 @@ namespace Tests.Cosmos
         {
             _settings = settings ?? throw new ArgumentNullException(nameof(settings));
 
-            _cosmosClient = new CosmosClient(settings.Endpoint, settings.Key);
+            var options = new CosmosClientOptions
+            {
+                ConnectionMode = ConnectionMode.Gateway // it's default in SDK v2
+            };
+            _cosmosClient = new CosmosClient(settings.Endpoint, settings.Key, options);
             _clientFactory = new Lazy<Database>(() =>
             {
                 var database = CheckIfDatabaseExists(settings).ConfigureAwait(false).GetAwaiter().GetResult();
